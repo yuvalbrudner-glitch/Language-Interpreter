@@ -1,0 +1,32 @@
+# Bytecode Virtual Machine (in C)
+
+A stack-based bytecode virtual machine and interpreter, built in C while working through
+Robert Nystrom's [*Crafting Interpreters*](https://craftinginterpreters.com/).
+
+## Status
+🚧 In progress — currently through Chapter 14 (Chunks of Bytecode)
+
+## What's implemented so far
+- `Chunk` struct to store compiled bytecode instructions and constants
+- A dynamic, growable array implementation from scratch (avoids fixed-size buffer limits)
+- Basic disassembler to decode and print bytecode instructions for debugging
+
+## What's next
+- Value/constant handling
+- The virtual machine execution loop
+- Expression parsing and compilation
+
+## Why I'm building this
+I wanted to understand how languages actually work under the hood — how source code
+becomes something a computer can execute. This project is my way of learning that from
+the ground up in C, rather than just using existing interpreters/compilers as black boxes.
+
+## Build & Run
+```bash
+gcc -o clox *.c
+./clox
+```
+
+## Reference
+Built by following *Crafting Interpreters* by Robert Nystrom — a fantastic resource if
+you want to understand interpreter/compiler design from first principles.
